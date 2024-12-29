@@ -1,0 +1,44 @@
+
+<!-- Interpolation -->
+<h1>Welcome to {{hotalName}}</h1>
+
+
+<!-- Property binding -->
+<div [hidden]="hideRooms">
+numberOfRooms:
+<div [ngStyle]="{'color' : rooms.avilableRooms ? 'green' : 'red'}" [innerText]="numberOfRoom"></div>
+
+</div>
+
+<!-- Event Binding -->
+<button (click)="toggle()">Toggle</button>
+
+<!-- Built in Directives -->
+<!-- {{rooms?.avilableRooms ?? 'No rooms'}} -->
+<div *ngIf="rooms.avilableRooms>0">
+    Rooms List
+    <!-- {{roomList}} -->
+     <table>
+        <tr>
+            <th>Index</th>
+            <th>Even/Odd</th>
+            <th>Room Number</th>
+            <th>Room Type</th>
+            <th>Room Price</th>
+            <th>Room Amenities</th>
+            <th>CheckInTime</th>
+        </tr>
+        <tr [ngClass]="e ? 'even' : 'odd'"
+         *ngFor="let room of roomList; let e = even; let o = odd let i = index">
+            <td>{{i}}</td>
+            <td>{{ e ? "Even" : "Odd"}}</td>
+            <td>{{ room.roomNo}}</td>
+            <td>{{room.roomType}}</td>
+            <td>{{ room.price}}</td>
+            <td>{{room.amenities}}</td>
+            <td>{{room.checkinTime | date : 'dd/mm/yyyy'}}</td>
+        </tr>
+     </table>
+</div>
+
+<!-- null collision operatior {{rooms.avilableRooms ?? 'No rooms'}} -->

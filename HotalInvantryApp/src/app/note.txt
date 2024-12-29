@@ -1,0 +1,51 @@
+Tamplate Syntax
+
+Agenada
+>Component Introduction
+>Creating your first Component
+>Binding syntax
+
+-----------------------------BINDING Syntax----------------------
+>three type binding 
+1>Interpolation
+2>Property Binding
+3>Event Binding
+
+
+------------------------------:Directives---------------------------
+Types
+>Introduction 
+.Directives are use to change the behavior and appearance of DOM element.
+.Directives can implement all lifecycle hooks.
+.Directives can not have template- means like html css, Component.ts etc
+
+Types
+1>Structual Directives - *ngIf,*ngFor,*ngSwitch which can modifies your dom element is Structual Directives.
+2>Attribute Directives - ngClass,ngStyle, add some Attribute
+>Built in Directives
+.>*ngif
+>*ngFor
+>*ngSwitch
+>ngClass
+>ngStyle
+
+
+
+-----------------------Pipes------------------------------
+Pipes>= Pipes are used for data transformation.
+>Pipes don't change actual object.
+
+Built-in Pipes
+>DatePipe
+>UpperCasePipe
+>LowerCasePipe
+>CurrencyPipe
+>DecimalPipe
+>PercentPipe
+>JsonPipe
+>SlicePipe
+>AsyncPipe
+>| spipe operator
+
+
+4:12 dekh chuke
