@@ -36,16 +36,40 @@ Pipes>= Pipes are used for data transformation.
 >Pipes don't change actual object.
 
 Built-in Pipes
->DatePipe
+>DatePipe    > many type format givin in angular docs
 >UpperCasePipe
 >LowerCasePipe
 >CurrencyPipe
 >DecimalPipe
 >PercentPipe
 >JsonPipe
->SlicePipe
+>SlicePipe-| slice:0:1
 >AsyncPipe
->| spipe operator
+>| pipe operator
 
 
-4:12 dekh chuke
+
+
+--------------------------------Lifecycle Hooks-----------------------------------
+Introduction
+>Component instance has lifecycle hooks which can help you to hook into different Event on Components.
+>Lifecycle ends when Component is destroyed.
+Types
+
+>ngOnChanges
+>ngOnInit
+>ngDoCheck
+>ngAfterContentInit
+>ngAfterContentChecked
+>ngAfterViewInit
+>ngAfterViewChecked
+>ngOnDestroy
+
+>Component Communication
+.The scenario where two or more Components needs to interact is know as Component Communication.
+.There are multiple way to achive the Component Communication.
+
+>Three way
+.Using @Input and @Output
+.Using @ViewChild and @ContentChild
+.Using Services

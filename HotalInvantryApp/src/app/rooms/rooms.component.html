@@ -15,30 +15,16 @@ numberOfRooms:
 
 <!-- Built in Directives -->
 <!-- {{rooms?.avilableRooms ?? 'No rooms'}} -->
+ <!-- {{roomList | json}} -->
+
+
+
+
 <div *ngIf="rooms.avilableRooms>0">
     Rooms List
     <!-- {{roomList}} -->
-     <table>
-        <tr>
-            <th>Index</th>
-            <th>Even/Odd</th>
-            <th>Room Number</th>
-            <th>Room Type</th>
-            <th>Room Price</th>
-            <th>Room Amenities</th>
-            <th>CheckInTime</th>
-        </tr>
-        <tr [ngClass]="e ? 'even' : 'odd'"
-         *ngFor="let room of roomList; let e = even; let o = odd let i = index">
-            <td>{{i}}</td>
-            <td>{{ e ? "Even" : "Odd"}}</td>
-            <td>{{ room.roomNo}}</td>
-            <td>{{room.roomType}}</td>
-            <td>{{ room.price}}</td>
-            <td>{{room.amenities}}</td>
-            <td>{{room.checkinTime | date : 'dd/mm/yyyy'}}</td>
-        </tr>
-     </table>
+     <Hotal-rooms-list [rooms]="roomList" (selectedRooms)="selectRoom($event)"></Hotal-rooms-list>
+   
 </div>
 
 <!-- null collision operatior {{rooms.avilableRooms ?? 'No rooms'}} -->
